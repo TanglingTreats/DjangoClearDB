@@ -24,7 +24,7 @@ print("Base directory: ",BASE_DIR)
 SECRET_KEY = '-i@twdgn2=%k1_16uf5ls$b7f0rzqt*8-3klonxvkg9z4+c^+k'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = Falses
 
 ALLOWED_HOSTS = [
     'c3ebed925ebe4211b5487770a48c7023.vfs.cloud9.ap-southeast-1.amazonaws.com', 
@@ -144,6 +144,6 @@ STATICFILES_DIRS = (
 )
 
 # add configuration for static files storage using whitenoise
-STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+#STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
 django_heroku.settings(locals())
