@@ -30,8 +30,6 @@ ALLOWED_HOSTS = [
     'c3ebed925ebe4211b5487770a48c7023.vfs.cloud9.ap-southeast-1.amazonaws.com', 
     'localhost', 
     '127.0.0.1',
-    'https://ap-southeast-1.console.aws.amazon.com',
-    'https://testerdb123.herokuapp.com',
     'testerdb123.herokuapp.com',
     '.herokuapp.com',
 ]
@@ -153,3 +151,19 @@ django_heroku.settings(locals())
 import dj_database_url 
 prod_db  =  dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(prod_db)
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'console': {
+            'class': 'logging.StreamHandler',
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['console'],
+             'level': os.getenv('DJANGO_LOG_LEVEL', 'DEBUG'),
+        },
+    },
+}
