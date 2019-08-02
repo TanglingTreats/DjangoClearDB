@@ -31,7 +31,7 @@ ALLOWED_HOSTS = [
     'localhost', 
     '127.0.0.1',
     'https://ap-southeast-1.console.aws.amazon.com',
-    'testerdb123.herokuapp.com'
+    'https://testerdb123.herokuapp.com/'
 ]
 
 
